@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Video Downloader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <main role="main">
+        <h1>Youtube Video Downloader</h1>
+        <img src="/static/css/icons8-pullups.gif" alt="" width="100px" id="pull">
+        <img src="/static/css/icons8-iphone-spinner.gif" alt="" width="100px" id="spin">
+        {%block content%}{%endblock%}
+    </main>
+
+</body>
+
+<script>
+    function downloading() {
+        document.getElementById("spin").style.display = "inline-block";
+        document.getElementById("pull").style.display = "inline-block";
+    }
+</script>
+
+<footer>
+    <div>
+
+        <span>for work related query contact me at <span>
+                <p><a href="mailto:sainyy11@gmail.com">sainyy11@gmail.com</a></p>
+                <center>
+                    <span>&copy;sainy98</span>
+                </center>
+
+    </div>
+</footer>
+
+</html>

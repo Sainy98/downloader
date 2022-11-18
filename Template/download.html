@@ -1,0 +1,17 @@
+{%extends 'index.html'%}
+{%block content%}
+<h3>{{TITLE}} </h3>
+<h3>{{yt.length/60}}</h3>
+<img src="{{image}}" alt="">
+<form action="{{url_for('downloaded')}}" method="POST">
+    <select name="itag" class="itag">
+        {% for i in yt.streams.filter(progressive=True) %}
+        <option value="{{i.itag}}">{{i.resolution}} {{i.filesize/1000000}}mb</option>
+        {%endfor%}
+
+    </select>
+
+    <button type="submit">Download</button>
+
+</form>
+{%endblock content%}
